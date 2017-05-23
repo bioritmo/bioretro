@@ -34,7 +34,7 @@ pt-BR:
     negative_topic: 'Ponto Negativo'
     doubt: 'Dúvida'
     days: 'dias'
-    opened_to: 'Em aberto a'
+    opened_to: 'Em aberto há'
   button:
     delete: 'Deletar'
     edit: 'Editar'
