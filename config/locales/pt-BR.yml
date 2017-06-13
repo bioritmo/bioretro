@@ -68,7 +68,9 @@ pt-BR:
     index:
       title: 'Times'
       admin: 'Administrar'
-
+  messages:
+    create_first_retrospective: Clique no botão ao lado para criar sua primeira retrospectiva.
+    no_retrospectives: Você ainda não possui nenhuma retrospectiva criada.
   activerecord:
     errors:
       messages:

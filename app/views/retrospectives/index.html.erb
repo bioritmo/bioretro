@@ -60,8 +60,8 @@
     <div class="ls-list">
       <header class="ls-list-header">
         <div class="ls-list-title col-md-9">
-          <%= link_to 'Você ainda não possui nenhuma retrospectiva criada.', new_team_retrospective_path(current_team), title: t('menu.create_retrospective') %>
-          <small>Clique no botão ao lado para criar sua primeira retrospectivs.</small>
+          <%= link_to t('messages.no_retrospectives'), new_team_retrospective_path(current_team), title: t('menu.create_retrospective') %>
+          <small><%= t('messages.create_first_retrospective') %></small>
         </div>
         <div class="col-md-3 ls-txt-right">
           <%= link_to t('menu.create_retrospective'), new_team_retrospective_path(current_team), class: 'ls-btn-primary', title: t('menu.create_retrospective') %>
