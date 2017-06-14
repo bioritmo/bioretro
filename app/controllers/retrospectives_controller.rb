@@ -66,12 +66,12 @@ class RetrospectivesController < ApplicationController
   end
 
   def positive_topics
-    @positive_topics = @retrospective.positive_topics.order(:id)
+    @positive_topics = @retrospective.positive_topics.order(like: :desc, dislike: :desc)
     @positive_topic = PositiveTopic.new
   end
 
   def negative_topics
-    @negative_topics = @retrospective.negative_topics.order(:id)
+    @negative_topics = @retrospective.negative_topics.order(like: :desc, dislike: :desc)
     @negative_topic = NegativeTopic.new
   end
 
