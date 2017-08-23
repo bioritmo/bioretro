@@ -13,6 +13,7 @@ gem 'settingslogic'
 gem 'responders', '~> 2.1'
 gem 'unicorn'
 gem  'spring'
+gem 'newrelic_rpm', '3.15.0.314'
 
 group :development, :test do
   gem 'byebug'
