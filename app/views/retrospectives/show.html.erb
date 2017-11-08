@@ -5,7 +5,7 @@
 <span class="ls-tag-info"><%= t('tag.room') %>: <%= @retrospective.room %></span>
 
 <!-- Actions -->
-<div class="ls-box ls-board-box">
+<div class="ls-box ls-board-box" style='display: none;'>
   <header class="ls-info-header">
     <h2 class="ls-title-3"><%= t('title.actions') %></h2>
   </header>
@@ -93,7 +93,7 @@
 <% end %>
 
 <!-- Positive Topics -->
-<div class="ls-box ls-board-box">
+<div class="ls-box ls-board-box" style='display: none;'>
   <header class="ls-info-header">
     <h2 class="ls-title-3"><%= t('title.positive_topics') %></h2>
   </header>
@@ -131,7 +131,7 @@
 </div>
 
 <!-- Negative Topics -->
-<div class="ls-box ls-board-box">
+<div class="ls-box ls-board-box" style='display: none;'>
   <header class="ls-info-header">
     <h2 class="ls-title-3"><%= t('title.negative_topics') %></h2>
   </header>
@@ -171,7 +171,11 @@
 <!-- Doubts -->
 <div class="ls-box ls-board-box">
   <header class="ls-info-header">
-    <h2 class="ls-title-3"><%= t('title.doubts') %></h2>
+    <h2 class="ls-title-2"><%= t('title.doubts') %></h2>
+    <p class='ls-label-text'>Por favor adicionem suas perguntas abaixo, sobre
+    qualquer tema relacionado ao departamento de tecnologia
+    ( Ex: projetos futuros, estrutura do time, etc )  que você queira saber.
+    As perguntas serão votadas, e as mais populares serão respondidas ao final do nosso encontro. </p>
   </header>
   <%= render partial: 'shared/forms/description', locals: {
     object: @doubt,
