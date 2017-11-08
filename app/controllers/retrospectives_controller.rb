@@ -61,7 +61,7 @@ class RetrospectivesController < ApplicationController
   end
 
   def doubts
-    @doubts = @retrospective.doubts.order(:id)
+    @doubts = @retrospective.doubts.order(like: :desc, dislike: :desc)
     @doubt = Doubt.new
   end
 

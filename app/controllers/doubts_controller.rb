@@ -26,6 +26,16 @@ class DoubtsController < ApplicationController
     @doubt.update_attributes(doubts_params)
   end
 
+  def like
+    @doubt = Doubt.find(params[:id])
+    @doubt.improve_like
+  end
+
+  def dislike
+    @doubt = Doubt.find(params[:id])
+    @doubt.improve_dislike
+  end
+
   private
 
   def doubts_params

@@ -1,9 +1,7 @@
 <% if @topic.type === 'PositiveTopic' %>
   var table = $('#positive-topics-table');
-<% elsif @topic.type === 'NegativeTopic' %>
-  var table = $('#negative-topics-table');
 <% else %>
-  var table = $('#doubts-table');
+  var table = $('#negative-topics-table');
 <% end %>
 var line = table.find('[data-id=<%= @topic.id %>]');
 var likeButton = line.find('.like-button');

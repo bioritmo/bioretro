@@ -6,7 +6,12 @@ Rails.application.routes.draw do
       resources :demands do
         get 'update_status', on: :member
       end
-      resources :doubts
+      resources :doubts do
+        member do
+          post :like
+          post :dislike
+        end
+      end
       resources :positive_topics
       resources :negative_topics
     end

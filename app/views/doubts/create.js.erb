@@ -5,6 +5,10 @@
   $('#doubts-table').find('tbody').append(
     '<tr data-id="<%= @doubt.id %>">' +
       '<td class="description"><%= @doubt.description %></td>' +
+      '<td class="like">' +
+        '<%= link_to (" (" + @doubt.like.to_s + ")"), like_team_retrospective_doubt_path(current_team, @retrospective, @doubt), method: :post, remote: true, class: "ls-btn ls-color-success ls-ico-thumbs-up like-button" %>' +
+        '<%= link_to (" (" + @doubt.dislike.to_s + ")"), dislike_team_retrospective_doubt_path(current_team, @retrospective, @doubt), method: :post, remote: true, class: "ls-btn ls-color-danger ls-ico-thumbs-up2 dislike-button" %>' +
+      '</td>' +
       '<td class="actions">' +
         '<div class="ls-group-btn">' +
           '<%= link_to "", edit_team_retrospective_doubt_path(current_team.id, @retrospective.id, @doubt.id), remote: true, class: "ls-btn ls-ico-pencil", title: t("button.edit") %>' +

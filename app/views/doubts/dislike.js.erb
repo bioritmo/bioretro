@@ -1,0 +1,5 @@
+var table = $('#doubts-table');
+var line = table.find('[data-id=<%= @doubt.id %>]');
+var dislikeButton = line.find('.dislike-button');
+
+dislikeButton.html('(' + <%= @doubt.dislike %> + ')').blur();
