@@ -6,7 +6,15 @@ class Doubt < ActiveRecord::Base
     increment!(:like)
   end
 
+  def remove_like
+    decrement!(:like)
+  end
+
   def improve_dislike
     increment!(:dislike)
+  end
+
+  def remove_dislike
+    decrement!(:dislike)
   end
 end
