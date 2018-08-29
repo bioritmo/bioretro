@@ -6,8 +6,8 @@
 var line = table.find('[data-id=<%= @topic.id %>]');
 var dislikeButton = line.find('.dislike-button');
 
-dislikeButton.attr('data-method', 'delete');
-dislikeButton.data('method', 'delete');
-dislikeButton.prop('href', '<%= remove_dislike_topic_path(@topic) %>');
+dislikeButton.attr('data-method', 'post');
+dislikeButton.data('method', 'post');
+dislikeButton.prop('href', '<%= dislike_topic_path(@topic) %>');
 
 dislikeButton.html('(' + <%= @topic.dislike %> + ')').blur();
