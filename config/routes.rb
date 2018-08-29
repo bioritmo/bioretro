@@ -9,7 +9,10 @@ Rails.application.routes.draw do
       resources :doubts do
         member do
           post :like
+          delete :remove_like
+
           post :dislike
+          delete :remove_dislike
         end
       end
       resources :positive_topics
@@ -20,7 +23,10 @@ Rails.application.routes.draw do
   resources :topics do
     member do
       post :like
+      delete :remove_like
+
       post :dislike
+      delete :remove_dislike
     end
   end
 end

@@ -36,6 +36,16 @@ class DoubtsController < ApplicationController
     @doubt.improve_dislike
   end
 
+  def remove_like
+    @doubt = Doubt.find(params[:id])
+    @doubt.remove_like
+  end
+
+  def remove_dislike
+    @doubt = Doubt.find(params[:id])
+    @doubt.remove_dislike
+  end
+
   private
 
   def doubts_params
