@@ -6,4 +6,4 @@ dislikeButton.attr('data-method', 'post');
 dislikeButton.data('method', 'post');
 dislikeButton.prop('href', '<%= dislike_team_retrospective_doubt_path(@doubt) %>');
 
-dislikeButton.html('(' + <%= @doubt.dislike %> + ')').blur();
+dislikeButton.html(' (' + <%= @doubt.dislike %> + ')').blur();

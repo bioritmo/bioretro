@@ -2,8 +2,8 @@ var table = $('#doubts-table');
 var line = table.find('[data-id=<%= @doubt.id %>]');
 var dislikeButton = line.find('.dislike-button');
 
-dislikeButton.attr('data-method', 'delete');
-dislikeButton.data('method', 'delete');
+dislikeButton.attr('data-method', 'patch');
+dislikeButton.data('method', 'patch');
 dislikeButton.prop('href', '<%= remove_dislike_team_retrospective_doubt_path(@doubt) %>');
 
-dislikeButton.html('(' + <%= @doubt.dislike %> + ')').blur();
+dislikeButton.html(' (' + <%= @doubt.dislike %> + ')').blur();

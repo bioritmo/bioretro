@@ -12,4 +12,4 @@ likeButton.attr('data-method', 'post');
 likeButton.data('method', 'post');
 likeButton.prop('href', '<%= like_topic_path(@topic) %>');
 
-likeButton.html('(' + <%= @topic.like %> + ')').blur();
+likeButton.html(' (' + <%= @topic.like %> + ')').blur();

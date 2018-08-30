@@ -10,4 +10,4 @@ dislikeButton.attr('data-method', 'post');
 dislikeButton.data('method', 'post');
 dislikeButton.prop('href', '<%= dislike_topic_path(@topic) %>');
 
-dislikeButton.html('(' + <%= @topic.dislike %> + ')').blur();
+dislikeButton.html(' (' + <%= @topic.dislike %> + ')').blur();

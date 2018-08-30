@@ -6,4 +6,4 @@ likeButton.attr('data-method', 'post');
 likeButton.data('method', 'post');
 likeButton.prop('href', '<%= like_team_retrospective_doubt_path(@doubt) %>');
 
-likeButton.html('(' + <%= @doubt.like %> + ')').blur();
+likeButton.html(' (' + <%= @doubt.like %> + ')').blur();

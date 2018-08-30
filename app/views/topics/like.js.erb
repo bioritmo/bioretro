@@ -8,8 +8,8 @@ var likeButton = line.find('.like-button');
 
 var method = likeButton.data('method');
 
-likeButton.attr('data-method', 'delete');
-likeButton.data('method', 'delete');
+likeButton.attr('data-method', 'patch');
+likeButton.data('method', 'patch');
 likeButton.prop('href', '<%= remove_like_topic_path(@topic) %>');
 
-likeButton.html('(' + <%= @topic.like %> + ')').blur();
+likeButton.html(' (' + <%= @topic.like %> + ')').blur();
