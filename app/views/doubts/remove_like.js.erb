@@ -2,8 +2,8 @@ var table = $('#doubts-table');
 var line = table.find('[data-id=<%= @doubt.id %>]');
 var likeButton = line.find('.like-button');
 
-likeButton.attr('data-method', 'patch');
-likeButton.data('method', 'patch');
-likeButton.prop('href', '<%= remove_like_team_retrospective_doubt_path(@doubt) %>');
+likeButton.attr('data-method', 'post');
+likeButton.data('method', 'post');
+likeButton.prop('href', '<%= like_team_retrospective_doubt_path(@doubt) %>');
 
 likeButton.html(' (' + <%= @doubt.like %> + ')').blur();

@@ -6,7 +6,15 @@ class Topic < ActiveRecord::Base
     self.increment!(:like)
   end
 
+  def remove_like
+    self.decrement!(:like)
+  end
+
   def improve_dislike
     self.increment!(:dislike)
+  end
+
+  def remove_dislike
+    self.decrement!(:dislike)
   end
 end
